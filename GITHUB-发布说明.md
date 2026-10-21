@@ -20,20 +20,35 @@
 https://github.com/你的账号/tianzhen-agent
 ```
 
-## 三、本地初始化并推送
+## 三、创建远程仓库并推送
 
-在项目根目录执行（Windows PowerShell / Git Bash 均可）：
+本地仓库已经初始化并完成首次提交，**不需要再执行 `git init`、`git add` 或 `git commit`**。
+
+1. 在 GitHub 上创建一个空仓库（建议 Public；不要勾选自动生成 README、.gitignore 或 License），例如 `tianzhen-agent`。
+2. 在项目根目录执行：
 
 ```bash
-git init
-git add .
-git commit -m "田诊卫士智能体版：大模型规划 + 规则引擎否决"
 git branch -M main
 git remote add origin https://github.com/你的账号/tianzhen-agent.git
 git push -u origin main
 ```
 
-如果默认分支不是 `main`，按 GitHub 页面提示调整。
+3. 如果提示 remote 已存在，用 `git remote set-url origin ...` 替换。
+4. 当前本地提交使用中性身份 `Tianzhen Project <tianzhen-project@users.noreply.github.com>`，避免把你的 QQ 邮箱写进公开历史。如果想用自己的 GitHub 身份，在首次推送前执行：
+
+```bash
+git config user.name "你的 GitHub 用户名"
+git config user.email "你的 GitHub noreply 邮箱"
+git commit --amend --reset-author --no-edit
+```
+
+如果已经推送，不要强制推送，除非你确认要改写公开历史。
+
+5. 环境里没有 `gh` CLI，所以用网页创建仓库。如果以后安装了 `gh` 并登录，也可以：
+
+```bash
+gh repo create tianzhen-agent --public --source=. --remote=origin --push
+```
 
 ## 四、检查仓库
 
