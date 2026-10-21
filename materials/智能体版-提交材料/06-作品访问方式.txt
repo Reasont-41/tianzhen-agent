@@ -1,0 +1,33 @@
+作品访问方式
+
+作品名称：田诊卫士 · 智能体版
+参赛方向：智慧农业
+
+一、开源仓库（本地部署）
+
+GitHub 链接：【待填写：https://github.com/你的账号/你的仓库】
+仓库包含：全部代码、知识库数据、模型权重/下载说明、部署方法、测试命令。
+启动方式（详见仓库 README）：
+
+  python -m venv .venv
+  .\.venv\Scripts\python.exe -m pip install torch==2.12.0+cpu torchvision==0.27.0 --index-url https://download.pytorch.org/whl/cpu
+  .\.venv\Scripts\python.exe -m pip install -r app/requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
+  .\.venv\Scripts\python.exe -m uvicorn app.api.main:app --host 127.0.0.1 --port 8000
+
+访问页面：
+- 表单版：http://127.0.0.1:8000/
+- 智能体对话版：http://127.0.0.1:8000/agent
+- 接口文档：http://127.0.0.1:8000/docs
+
+智能体模式需要配置大模型密钥（环境变量 TIANZHEN_LLM_API_KEY，或复用 DEEPSEEK_API_KEY）；不配置时自动进入本地规划模式，仍可完整演示工具链和规则校验。
+API Key 不写入仓库；评委如需要在线演示，可使用我们提供的临时测试账号：【如有，填写测试账号；没有则删除本行】。
+
+二、线上体验链接（如有）
+
+【如已部署公网，填写链接和测试账号；没有则删除本节】
+
+三、说明
+
+- 本作品为本地部署的 Web 应用，不依赖公网数据库；首次安装依赖需要联网，模型推理不自动下载文件。
+- 知识库中的药剂记录仍为演示/待核验资料，系统不签发正式田间处方。
+- 演示视频、PPT 和说明文档已随压缩包提交。

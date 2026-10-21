@@ -1,0 +1,349 @@
+{
+  "benchmark_type": "fixed_label_synthetic_functional_cases",
+  "scope": "固定标签的软件功能基准；使用虚构登记记录，不是专家标注的真实农业处方。标签在执行校验器前固定。",
+  "fixture_sha256": "d70b1162af55d661060a1f9ef12131d938f260857c11ead8b365de2e2a7ee4b2",
+  "n_cases": 36,
+  "correct": 36,
+  "violation_recall": 1.0,
+  "false_accepts": 0,
+  "valid_false_block_rate": 0.0,
+  "review_correct": 8,
+  "confusion_matrix": {
+    "passed": {
+      "passed": 7,
+      "blocked": 0,
+      "needs_review": 0
+    },
+    "blocked": {
+      "passed": 0,
+      "blocked": 21,
+      "needs_review": 0
+    },
+    "needs_review": {
+      "passed": 0,
+      "blocked": 0,
+      "needs_review": 8
+    }
+  },
+  "details": [
+    {
+      "case_id": "valid",
+      "expected": "passed",
+      "actual": "passed",
+      "correct": true,
+      "failed_rules": []
+    },
+    {
+      "case_id": "lower-bound",
+      "expected": "passed",
+      "actual": "passed",
+      "correct": true,
+      "failed_rules": []
+    },
+    {
+      "case_id": "upper-bound",
+      "expected": "passed",
+      "actual": "passed",
+      "correct": true,
+      "failed_rules": []
+    },
+    {
+      "case_id": "equivalent-kg",
+      "expected": "passed",
+      "actual": "passed",
+      "correct": true,
+      "failed_rules": []
+    },
+    {
+      "case_id": "equivalent-g-alias",
+      "expected": "passed",
+      "actual": "passed",
+      "correct": true,
+      "failed_rules": []
+    },
+    {
+      "case_id": "longer-interval",
+      "expected": "passed",
+      "actual": "passed",
+      "correct": true,
+      "failed_rules": []
+    },
+    {
+      "case_id": "one-use-before-limit",
+      "expected": "passed",
+      "actual": "passed",
+      "correct": true,
+      "failed_rules": []
+    },
+    {
+      "case_id": "missing-dose",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "dosage_range"
+      ]
+    },
+    {
+      "case_id": "missing-unit",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "dosage_range"
+      ]
+    },
+    {
+      "case_id": "unit-thousandfold",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "dosage_range"
+      ]
+    },
+    {
+      "case_id": "wrong-dimension",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "dosage_range"
+      ]
+    },
+    {
+      "case_id": "unsupported-unit",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "dosage_range"
+      ]
+    },
+    {
+      "case_id": "under-dose",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "dosage_range"
+      ]
+    },
+    {
+      "case_id": "over-dose",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "dosage_range"
+      ]
+    },
+    {
+      "case_id": "zero-dose",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "dosage_range"
+      ]
+    },
+    {
+      "case_id": "missing-interval",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "safety_interval"
+      ]
+    },
+    {
+      "case_id": "shortened-interval",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "safety_interval"
+      ]
+    },
+    {
+      "case_id": "harvest-conflict",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "safety_interval"
+      ]
+    },
+    {
+      "case_id": "identity-mismatch",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "traceability"
+      ]
+    },
+    {
+      "case_id": "formulation-mismatch",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "traceability"
+      ]
+    },
+    {
+      "case_id": "content-mismatch",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "traceability"
+      ]
+    },
+    {
+      "case_id": "certificate-mismatch",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "traceability"
+      ]
+    },
+    {
+      "case_id": "unknown-id",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "traceability",
+        "crop_registered",
+        "target_registered",
+        "dosage_range",
+        "safety_interval",
+        "max_applications"
+      ]
+    },
+    {
+      "case_id": "wrong-crop",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "crop_registered"
+      ]
+    },
+    {
+      "case_id": "wrong-target",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "target_registered"
+      ]
+    },
+    {
+      "case_id": "at-limit",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "max_applications"
+      ]
+    },
+    {
+      "case_id": "over-limit",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "max_applications"
+      ]
+    },
+    {
+      "case_id": "missing-source",
+      "expected": "blocked",
+      "actual": "blocked",
+      "correct": true,
+      "failed_rules": [
+        "traceability"
+      ]
+    },
+    {
+      "case_id": "missing-harvest",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "correct": true,
+      "failed_rules": [
+        "safety_interval"
+      ]
+    },
+    {
+      "case_id": "unknown-history",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "correct": true,
+      "failed_rules": [
+        "max_applications"
+      ]
+    },
+    {
+      "case_id": "seed-status",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "correct": true,
+      "failed_rules": [
+        "traceability"
+      ]
+    },
+    {
+      "case_id": "standard-only",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "correct": true,
+      "failed_rules": [
+        "traceability"
+      ]
+    },
+    {
+      "case_id": "missing-certificate",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "correct": true,
+      "failed_rules": [
+        "traceability"
+      ]
+    },
+    {
+      "case_id": "missing-record-interval",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "correct": true,
+      "failed_rules": [
+        "safety_interval"
+      ]
+    },
+    {
+      "case_id": "missing-record-dose",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "correct": true,
+      "failed_rules": [
+        "dosage_range"
+      ]
+    },
+    {
+      "case_id": "missing-record-limit",
+      "expected": "needs_review",
+      "actual": "needs_review",
+      "correct": true,
+      "failed_rules": [
+        "max_applications"
+      ]
+    }
+  ],
+  "limitations": [
+    "标签为开发者针对功能契约构造，未由外部专家独立标注。",
+    "不能外推为真实农业处方合规率或大模型错误率。"
+  ]
+}

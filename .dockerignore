@@ -1,0 +1,15 @@
+.git
+.venv
+.pytest_cache
+__pycache__
+**/.matplotlib
+*.py[cod]
+*.log
+data_raw
+tests
+reports
+赛事资料
+前期分析(历史文档)
+*.zip
+*.pdf
+*.doc

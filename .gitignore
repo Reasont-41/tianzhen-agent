@@ -1,0 +1,9 @@
+.venv/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+app/artifacts/.matplotlib/
+data_raw/
+.build/
+archive/
+delivery/

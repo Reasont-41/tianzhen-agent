@@ -1,0 +1,84 @@
+{
+  "_meta": {
+    "name": "施药气象条件规则库",
+    "purpose": "施药窗口期模块的判定依据。输入未来逐小时气象数据，输出哪些时段适宜施药及原因。",
+    "note": "阈值为通用植保经验值，提交前建议对照当地植保部门指导核验",
+    "version": "0.1.0-seed"
+  },
+  "rules": [
+    {
+      "rule_id": "wind_speed_max",
+      "name": "风速上限",
+      "field": "wind_speed_ms",
+      "operator": ">",
+      "threshold": 5.4,
+      "severity": "block",
+      "reason": "风速超过3级（约5.4米/秒），药液飘移严重，既降低防效又可能对邻近作物造成药害",
+      "source": "通用植保作业规范"
+    },
+    {
+      "rule_id": "wind_speed_warn",
+      "name": "风速偏高提示",
+      "field": "wind_speed_ms",
+      "operator": ">",
+      "threshold": 3.4,
+      "severity": "warn",
+      "reason": "风速已达2-3级，建议降低喷头高度或加装防风罩，减少飘移",
+      "source": "通用植保作业规范"
+    },
+    {
+      "rule_id": "rain_now",
+      "name": "当前有降雨",
+      "field": "precip_mm",
+      "operator": ">",
+      "threshold": 0.1,
+      "severity": "block",
+      "reason": "正在降雨，药液会被冲刷流失，不宜施药",
+      "source": "通用植保作业规范"
+    },
+    {
+      "rule_id": "rain_soon",
+      "name": "短时间内将降雨",
+      "field": "precip_prob_next_6h",
+      "operator": ">=",
+      "threshold": 60,
+      "severity": "block",
+      "reason": "未来6小时降雨概率较高，施药后遇雨需补施，建议改期",
+      "source": "通用植保作业规范"
+    },
+    {
+      "rule_id": "temp_too_high",
+      "name": "气温过高",
+      "field": "temp_c",
+      "operator": ">",
+      "threshold": 32,
+      "severity": "block",
+      "reason": "高温时段施药易产生药害，且施药人员中毒风险升高",
+      "source": "通用植保作业规范"
+    },
+    {
+      "rule_id": "temp_too_low",
+      "name": "气温过低",
+      "field": "temp_c",
+      "operator": "<",
+      "threshold": 5,
+      "severity": "warn",
+      "reason": "低温下部分药剂吸收代谢变慢，药效发挥受限",
+      "source": "通用植保作业规范"
+    },
+    {
+      "rule_id": "humidity_low",
+      "name": "空气过于干燥",
+      "field": "humidity_pct",
+      "operator": "<",
+      "threshold": 40,
+      "severity": "warn",
+      "reason": "空气干燥时药液蒸发快，可适当增加用水量或避开正午",
+      "source": "通用植保作业规范"
+    }
+  ],
+  "preferred_time_windows": [
+    {"start_hour": 6, "end_hour": 9, "reason": "上午露水干后至高温前，气孔开放、药液吸收好"},
+    {"start_hour": 16, "end_hour": 19, "reason": "下午高温过后，避开强光与高温，药害风险低"}
+  ]
+}

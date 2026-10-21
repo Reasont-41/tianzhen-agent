@@ -1,0 +1,22 @@
+{
+  "file": "田诊卫士-智能体版-功能演示.mp4",
+  "duration_seconds": 111,
+  "bytes": 900741,
+  "metadata": {
+    "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+    "codec": "h264",
+    "pix_fmt": "yuv420p(progressive)",
+    "fps": 10.0,
+    "source_size": [
+      1920,
+      1080
+    ],
+    "size": [
+      1920,
+      1080
+    ],
+    "rotate": 0,
+    "duration": 111.0
+  },
+  "mode": "actual screenshots + architecture + experiment chart + captions, no voiceover"
+}

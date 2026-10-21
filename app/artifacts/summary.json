@@ -1,0 +1,129 @@
+{
+  "diagnosis": {
+    "trained_at": "2026-10-17T14:48:58",
+    "evaluation_protocol": "stratified_train_validation_test_60_20_20",
+    "threshold_selection": "validation_correct_confidence_5th_percentile",
+    "random_seed": 20261017,
+    "dataset_fingerprint": "b4727a16ea7d209a3e66c79726462d9ccd012574f9e65275c3f5f6c18f02417e",
+    "n_total": 5438,
+    "exact_duplicates_removed": 14,
+    "n_train": 3262,
+    "n_validation": 1088,
+    "n_test": 1088,
+    "accuracy": 0.96875,
+    "low_confidence_threshold": 0.9410032560577367,
+    "selective_prediction": {
+      "threshold": 0.9410032560577367,
+      "rejection_rate": 0.06525735294117647,
+      "accuracy_on_accepted": 0.9882005899705014,
+      "n_accepted": 1017,
+      "accepted_errors": 12,
+      "baseline_accuracy": 0.96875
+    },
+    "feature_dim": 576,
+    "img_size": 224,
+    "backbone": "MobileNetV3-Small (ImageNet, frozen)",
+    "head": "LogisticRegression(C=1)",
+    "dataset": "PlantVillage tomato four-class controlled leaf dataset",
+    "scope": "公开叶片数据集评估；未验证真实田间泛化；输入质量门禁另作回归测试。",
+    "per_class": {
+      "健康": {
+        "precision": 0.9814241486068112,
+        "recall": 1.0,
+        "f1": 0.990625,
+        "support": 317.0
+      },
+      "叶霉病": {
+        "precision": 0.9736842105263158,
+        "recall": 0.9685863874345549,
+        "f1": 0.9711286089238845,
+        "support": 191.0
+      },
+      "早疫病": {
+        "precision": 0.9526315789473684,
+        "recall": 0.905,
+        "f1": 0.9282051282051282,
+        "support": 200.0
+      },
+      "晚疫病": {
+        "precision": 0.9636363636363636,
+        "recall": 0.9763157894736842,
+        "f1": 0.9699346405228758,
+        "support": 380.0
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "健康",
+        "叶霉病",
+        "早疫病",
+        "晚疫病"
+      ],
+      "matrix": [
+        [
+          317,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          185,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          181,
+          13
+        ],
+        [
+          2,
+          1,
+          6,
+          371
+        ]
+      ]
+    },
+    "model_sha256": "bef44df756aaa2db5da32a14072b54a791c5183d4a03b5661814e1a6b03debea"
+  },
+  "constraint_benchmark": {
+    "benchmark_type": "fixed_label_synthetic_functional_cases",
+    "scope": "固定标签的软件功能基准；使用虚构登记记录，不是专家标注的真实农业处方。标签在执行校验器前固定。",
+    "fixture_sha256": "d70b1162af55d661060a1f9ef12131d938f260857c11ead8b365de2e2a7ee4b2",
+    "n_cases": 36,
+    "correct": 36,
+    "violation_recall": 1.0,
+    "false_accepts": 0,
+    "valid_false_block_rate": 0.0,
+    "review_correct": 8,
+    "confusion_matrix": {
+      "passed": {
+        "passed": 7,
+        "blocked": 0,
+        "needs_review": 0
+      },
+      "blocked": {
+        "passed": 0,
+        "blocked": 21,
+        "needs_review": 0
+      },
+      "needs_review": {
+        "passed": 0,
+        "blocked": 0,
+        "needs_review": 8
+      }
+    },
+    "limitations": [
+      "标签为开发者针对功能契约构造，未由外部专家独立标注。",
+      "不能外推为真实农业处方合规率或大模型错误率。"
+    ]
+  },
+  "figures": [
+    "fig1_confusion_matrix.png",
+    "fig2_per_class_metrics.png",
+    "fig3_risk_coverage.png",
+    "fig4_experiment_e2.png"
+  ]
+}

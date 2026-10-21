@@ -1,0 +1,154 @@
+{
+  "_meta": {
+    "name": "病害知识库",
+    "coverage": "番茄 / 黄瓜 / 小麦 三种作物共 12 种主要病害",
+    "note": "所有记录 verification_status 均为 seed_unverified，提交前须由植保专业人员对照官方资料核验",
+    "version": "0.1.0-seed"
+  },
+  "diseases": [
+    {
+      "disease_id": "tomato_late_blight",
+      "crop": "番茄",
+      "name": "晚疫病",
+      "aliases": ["番茄晚疫病", "疫病", "黑杆病"],
+      "pathogen": "致病疫霉 Phytophthora infestans",
+      "symptoms": "叶片出现暗绿色水浸状病斑，迅速扩大为褐色大斑，潮湿时叶背病健交界处产生白色霉层；茎秆出现黑褐色条斑，果实出现油浸状褐色硬斑。",
+      "favorable_conditions": "低温高湿，气温18-22℃、相对湿度95%以上连续数小时易流行；露地连阴雨、保护地放风不足时高发。",
+      "severity_levels": ["轻", "中", "重"],
+      "source": "公开植保文献与农技推广资料整理",
+      "verification_status": "seed_unverified"
+    },
+    {
+      "disease_id": "tomato_gray_mold",
+      "crop": "番茄",
+      "name": "灰霉病",
+      "aliases": ["番茄灰霉病"],
+      "pathogen": "灰葡萄孢 Botrytis cinerea",
+      "symptoms": "果实脐部或果肩出现水浸状浅褐色病斑并迅速腐烂，表面密生灰色绒毛状霉层；叶片自叶尖开始出现V形褐色病斑，边缘有深浅相间的轮纹。",
+      "favorable_conditions": "低温高湿，气温20-23℃、相对湿度90%以上；保护地内光照不足、通风差时发生重。",
+      "severity_levels": ["轻", "中", "重"],
+      "source": "公开植保文献与农技推广资料整理",
+      "verification_status": "seed_unverified"
+    },
+    {
+      "disease_id": "tomato_leaf_mold",
+      "crop": "番茄",
+      "name": "叶霉病",
+      "aliases": ["番茄叶霉病", "黑霉病"],
+      "pathogen": "褐孢霉 Passalora fulva",
+      "symptoms": "叶片正面出现不规则淡黄色褪绿斑，对应叶背产生灰白色后转褐色的绒毛状霉层，病斑扩大后叶片卷曲干枯。",
+      "favorable_conditions": "保护地高湿（相对湿度90%以上）、气温20-25℃、通风不良时严重。",
+      "severity_levels": ["轻", "中", "重"],
+      "source": "公开植保文献与农技推广资料整理",
+      "verification_status": "seed_unverified"
+    },
+    {
+      "disease_id": "tomato_early_blight",
+      "crop": "番茄",
+      "name": "早疫病",
+      "aliases": ["番茄早疫病", "轮纹病"],
+      "pathogen": "茄链格孢 Alternaria solani",
+      "symptoms": "下部叶片先发病，出现褐色圆形病斑，有明显的同心轮纹，外围有黄色晕圈；茎和果实亦可受害，果柄处形成凹陷褐色病斑。",
+      "favorable_conditions": "高温高湿，气温26-28℃、相对湿度80%以上；植株长势弱、缺肥时发病重。",
+      "severity_levels": ["轻", "中", "重"],
+      "source": "公开植保文献与农技推广资料整理",
+      "verification_status": "seed_unverified"
+    },
+    {
+      "disease_id": "tomato_powdery_mildew",
+      "crop": "番茄",
+      "name": "白粉病",
+      "aliases": ["番茄白粉病"],
+      "pathogen": "番茄粉孢 Oidium neolycopersici",
+      "symptoms": "叶片表面出现白色近圆形粉斑，逐渐扩大连成片，覆盖整个叶面，后期叶片变黄褐枯死。",
+      "favorable_conditions": "温暖干燥与高湿交替，气温20-25℃；保护地内昼夜温差大、湿度波动大时易发。",
+      "severity_levels": ["轻", "中", "重"],
+      "source": "公开植保文献与农技推广资料整理",
+      "verification_status": "seed_unverified"
+    },
+    {
+      "disease_id": "cucumber_downy_mildew",
+      "crop": "黄瓜",
+      "name": "霜霉病",
+      "aliases": ["黄瓜霜霉病", "跑马干", "黑毛"],
+      "pathogen": "古巴假霜霉 Pseudoperonospora cubensis",
+      "symptoms": "叶片正面出现受叶脉限制的多角形黄褐色病斑，叶背在潮湿时产生灰黑色霉层；病斑扩展迅速，严重时全叶干枯。",
+      "favorable_conditions": "凉爽高湿，气温16-24℃、相对湿度85%以上；昼夜温差大、叶面结露时间长时流行快。",
+      "severity_levels": ["轻", "中", "重"],
+      "source": "公开植保文献与农技推广资料整理",
+      "verification_status": "seed_unverified"
+    },
+    {
+      "disease_id": "cucumber_powdery_mildew",
+      "crop": "黄瓜",
+      "name": "白粉病",
+      "aliases": ["黄瓜白粉病", "白毛病"],
+      "pathogen": "单囊壳白粉菌 Podosphaera xanthii",
+      "symptoms": "叶面出现白色近圆形小粉斑，逐渐扩大连片，白色粉层加厚，后期变为灰白色，叶片黄枯。",
+      "favorable_conditions": "气温20-25℃、空气相对湿度较低但叶面有结露时最易流行；保护地内通风不良时重。",
+      "severity_levels": ["轻", "中", "重"],
+      "source": "公开植保文献与农技推广资料整理",
+      "verification_status": "seed_unverified"
+    },
+    {
+      "disease_id": "cucumber_anthracnose",
+      "crop": "黄瓜",
+      "name": "炭疽病",
+      "aliases": ["黄瓜炭疽病"],
+      "pathogen": "葫芦科刺盘孢 Colletotrichum orbiculare",
+      "symptoms": "叶片出现近圆形红褐色病斑，边缘有黄色晕圈，后期病斑中央易穿孔；茎蔓和瓜条上形成凹陷褐色病斑，潮湿时产生粉红色黏稠物。",
+      "favorable_conditions": "气温22-27℃、相对湿度85%以上；连作地块、排水不良时发病重。",
+      "severity_levels": ["轻", "中", "重"],
+      "source": "公开植保文献与农技推广资料整理",
+      "verification_status": "seed_unverified"
+    },
+    {
+      "disease_id": "cucumber_fusarium_wilt",
+      "crop": "黄瓜",
+      "name": "枯萎病",
+      "aliases": ["黄瓜枯萎病", "蔓割病"],
+      "pathogen": "尖孢镰刀菌黄瓜专化型 Fusarium oxysporum f. sp. cucumerinum",
+      "symptoms": "植株白天萎蔫、早晚恢复，反复数日后整株枯死；茎基部纵裂，剖开维管束变褐。",
+      "favorable_conditions": "土传病害，连作年限长、土壤黏重、地温20-25℃时发病重。",
+      "severity_levels": ["轻", "中", "重"],
+      "source": "公开植保文献与农技推广资料整理",
+      "verification_status": "seed_unverified"
+    },
+    {
+      "disease_id": "wheat_stripe_rust",
+      "crop": "小麦",
+      "name": "条锈病",
+      "aliases": ["小麦条锈病", "黄疸病"],
+      "pathogen": "条形柄锈菌 Puccinia striiformis f. sp. tritici",
+      "symptoms": "叶片上出现鲜黄色小疱状夏孢子堆，沿叶脉排列成整齐的虚线状条纹；后期表皮破裂散出黄色粉末。",
+      "favorable_conditions": "气温9-16℃、叶面有结露或降雨；春季多雨、温度回升慢时流行。",
+      "severity_levels": ["轻", "中", "重"],
+      "source": "公开植保文献与农技推广资料整理",
+      "verification_status": "seed_unverified"
+    },
+    {
+      "disease_id": "wheat_fusarium_head_blight",
+      "crop": "小麦",
+      "name": "赤霉病",
+      "aliases": ["小麦赤霉病", "麦穗枯", "烂麦头"],
+      "pathogen": "禾谷镰刀菌 Fusarium graminearum",
+      "symptoms": "小穗基部出现水浸状褐斑，随后整个小穗枯黄，潮湿时颖壳缝隙处产生粉红色霉层，后期产生黑色小颗粒。病粒含毒素，不可食用。",
+      "favorable_conditions": "抽穗扬花期遇连续阴雨或高湿（相对湿度80%以上）、气温15-25℃时大流行。",
+      "severity_levels": ["轻", "中", "重"],
+      "source": "公开植保文献与农技推广资料整理",
+      "verification_status": "seed_unverified"
+    },
+    {
+      "disease_id": "wheat_powdery_mildew",
+      "crop": "小麦",
+      "name": "白粉病",
+      "aliases": ["小麦白粉病"],
+      "pathogen": "禾本科布氏白粉菌 Blumeria graminis f. sp. tritici",
+      "symptoms": "叶片表面产生白色粉状霉层，后期霉层变灰褐色并散生黑色小颗粒；严重时叶片黄化枯死。",
+      "favorable_conditions": "气温15-20℃、相对湿度70%以上、光照不足；施氮过多、群体密度大时发病重。",
+      "severity_levels": ["轻", "中", "重"],
+      "source": "公开植保文献与农技推广资料整理",
+      "verification_status": "seed_unverified"
+    }
+  ]
+}
