@@ -69,9 +69,8 @@ SUBMIT_NOTE = """田诊卫士 · 智能体版 —— 提交包说明
 09-源代码与部署说明.zip
 
 三、不要放进提交包
-- 旧版本方案、PPT、视频（已移到 archive/，仅作技术参考）。
-- reports/ 中的测试报告、截图、旧交付清单。
-- .build/、.venv/、__pycache__/ 等构建缓存。
+- 无关的历史材料、构建缓存和内部截图。
+- .build/、.venv/、__pycache__/ 等本地目录。
 """
 
 COMMITMENT_PLACEHOLDER = """请把签字并扫描后的原创承诺书 PDF 放在本目录，文件名为：
@@ -150,7 +149,7 @@ def main() -> None:
     print(f"source zip: {SOURCE_ZIP}  {SOURCE_ZIP.stat().st_size / 1024 / 1024:.2f} MB")
     print(f"delivery  : {DELIVERY}")
     print(f"outer zip : {DELIVERY_ZIP}  {DELIVERY_ZIP.stat().st_size / 1024 / 1024:.2f} MB")
-    print("\n提交前请按 00-提交说明.txt 替换承诺书、填写 GitHub 链接并重命名。")
+    print("\n提交前请按 00-提交说明.txt 替换承诺书、确认 GitHub 链接并重命名。")
 
 
 if __name__ == "__main__":

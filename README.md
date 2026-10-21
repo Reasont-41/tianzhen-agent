@@ -2,19 +2,17 @@
 
 “码上智农，电亮未来”智能体创新应用比赛 · 智慧农业方向
 
-面向小农户的番茄病害诊断与安全用药智能体。大模型负责理解、追问和规划工具，确定性规则引擎负责逐条否决；所有用药条目来自知识库记录，天气窗口始终标记为模拟数据。
+面向小农户的番茄病害诊断与安全用药智能体。系统以对话为入口：大模型负责理解、追问和工具编排，确定性规则引擎对每一条用药建议逐项校验。所有用药条目来自知识库记录，天气窗口始终标记为模拟数据。
 
 GitHub 仓库：https://github.com/Reasont-41/tianzhen-agent
 
-本目录是在原“田诊卫士”农业决策辅助软件上的智能体改造版。本版新增对话式智能体、工具调用、会话管理和离线规划回退，并保留原有的视觉诊断、规则校验、来源展示与施药窗口能力。
-
-## 这个版本新增了什么
+## 核心能力
 
 - **对话式入口** `/agent`：多轮对话、叶片照片上传、工具调用轨迹、候选记录/逐条校验/模拟窗口卡片。
 - **大模型工具调用**：`get_leaf_diagnosis`、`search_disease`、`get_candidate_records`、`validate_prescription`、`get_spray_window`、`ask_user`、`get_kb_status`。
 - **安全闭环**：大模型不直接生成农药剂量；任何用药建议必须先经过 `ConstraintEngine`。`blocked` 条目不得推荐，`needs_review` 必须标注“待核验/需补充”。
 - **本地规划回退**：未配置大模型密钥时，使用同一组工具执行固定计划；离线可演示、可自动化测试，不会白屏。
-- **测试**：60 项自动化测试通过（原有 51 项 + 智能体 9 项）。
+- **测试**：60 项自动化测试全部通过。
 
 ## 快速运行
 
@@ -71,7 +69,7 @@ $env:TIANZHEN_LLM_MODEL="deepseek-chat"
 
 两种模式共用同一套工具、规则引擎和安全边界；区别只在“谁来决定调用顺序”。
 
-## 本版实跑结果
+## 实跑结果
 
 | 项目 | 结果 |
 |---|---|
@@ -118,12 +116,9 @@ python -m app.analyze
 - `materials/智能体版-提交材料/`：团队分工说明、AI 工具与开发说明、原创承诺书填写说明、提交清单、作品说明、报名简介。
 - `presentation/田诊卫士-智能体版-答辩.pptx`：比赛答辩稿（15 页以内）。
 - `materials/田诊卫士-智能体版-功能演示.mp4`：2 分钟内功能演示。
-- `delivery/`：按报名群格式改名后即可压缩发送的提交包（本地目录，已通过 `.gitignore` 排除，不在公开仓库中）。
-- `GITHUB-发布说明.md`：创建公开仓库并把链接填回 `06-作品访问方式.txt` 的步骤。
-- `reports/screenshots/agent-*.png`：本次实际浏览器截图。
-- `reports/`：智能体测试报告、运行验证和本版截图。
-
-旧版本材料保存在本地 `archive/旧版技术附录/`，已通过 `.gitignore` 排除，不进入公开仓库；正式提交时请使用“智能体版”材料。公开仓库保留代码、测试、知识库、模型权重和实验产物。
+- `GITHUB-发布说明.md`：仓库创建和部署说明。
+- `reports/screenshots/agent-*.png`：实际运行截图。
+- `reports/`：测试报告、运行验证和运行截图。
 
 ## 目录结构
 
@@ -153,4 +148,4 @@ tools/                   # 数据准备、打包、校验脚本
 - Howard A 等，Searching for MobileNetV3，ICCV，2019。
 - Hughes D P、Salathé M，An open access repository of images on plant health，2015；PlantVillage-Dataset 公开仓库。
 - GB/T 8321.9—2009、GB/T 8321.10—2018，团队已比对的依据范围见各记录 `verified_basis`。
-- OpenAI-compatible Chat Completions / tool calling 接口规范；本版默认使用 DeepSeek，可替换为其他国内合规平台。
+- OpenAI-compatible Chat Completions / tool calling 接口规范；默认使用 DeepSeek，可替换为其他国内合规平台。
