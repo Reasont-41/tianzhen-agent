@@ -5,7 +5,8 @@
 
 一、开源仓库（本地部署）
 
-GitHub 链接：【待填写：https://github.com/你的账号/你的仓库】
+GitHub 链接：https://github.com/Reasont-41/tianzhen-agent
+仓库状态：Public（公开）
 仓库包含：全部代码、知识库数据、模型权重/下载说明、部署方法、测试命令。
 启动方式（详见仓库 README）：
 
